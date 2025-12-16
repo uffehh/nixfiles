@@ -19,7 +19,7 @@
 
     # Work development environment (shared team configuration)
     work-nix-config = {
-      url = "github:jmh_DAC/nixfiles";
+      url = "github:uffehh/nixfiles";
       inputs.nixpkgs.follows = "nixpkgs"; # Use the same nixpkgs version
     };
   };
