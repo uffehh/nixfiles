@@ -1,4 +1,4 @@
-# Work Development Environment
+# Development Environment
 
 Declarative NixOS/Home Manager configuration for C# development and database work on WSL.
 
