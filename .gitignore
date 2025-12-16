@@ -1,0 +1,17 @@
+# Nix build results
+result
+result-*
+
+# Nix flake lock file (commit this if you want reproducible builds)
+# flake.lock
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
