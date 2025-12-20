@@ -75,46 +75,48 @@ in
     programs.git = {
       enable = true;
 
-      # User information (from options above)
-      userName = cfg.userName;
-      userEmail = cfg.userEmail;
+      settings = {
+        # User information (from options above)
+        user = {
+          name = cfg.userName;
+          email = cfg.userEmail;
+        };
 
-      # ======================================================================
-      # Git Aliases - Shortcuts for Common Commands
-      # ======================================================================
+        # ======================================================================
+        # Git Aliases - Shortcuts for Common Commands
+        # ======================================================================
 
-      aliases = {
-        # === Basic Shortcuts ===
-        st = "status";
-        co = "checkout";
-        br = "branch";
-        ci = "commit";
+        alias = {
+          # === Basic Shortcuts ===
+          st = "status";
+          co = "checkout";
+          br = "branch";
+          ci = "commit";
 
-        # === Pretty Log ===
-        # Shows a nice graph of your commit history
-        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+          # === Pretty Log ===
+          # Shows a nice graph of your commit history
+          lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
 
-        # === Useful Commands ===
-        last = "log -1 HEAD --stat";              # Show what changed in last commit
-        undo = "reset HEAD~1 --mixed";            # Undo last commit but keep changes
-        unstage = "reset HEAD --";                # Unstage files
-        uncommit = "reset --soft HEAD~1";         # Undo commit but keep changes staged
+          # === Useful Commands ===
+          last = "log -1 HEAD --stat";              # Show what changed in last commit
+          undo = "reset HEAD~1 --mixed";            # Undo last commit but keep changes
+          unstage = "reset HEAD --";                # Unstage files
+          uncommit = "reset --soft HEAD~1";         # Undo commit but keep changes staged
 
-        # === Branch Management ===
-        branches = "branch -a";                   # List all branches
-        recent = "branch --sort=-committerdate";  # List branches by recent activity
+          # === Branch Management ===
+          branches = "branch -a";                   # List all branches
+          recent = "branch --sort=-committerdate";  # List branches by recent activity
 
-        # === Diff Shortcuts ===
-        df = "diff";
-        dc = "diff --cached";                     # Show staged changes
+          # === Diff Shortcuts ===
+          df = "diff";
+          dc = "diff --cached";                     # Show staged changes
 
-      } // cfg.extraAliases;  # Merge user's custom aliases
+        } // cfg.extraAliases;  # Merge user's custom aliases
 
-      # ======================================================================
-      # Git Configuration
-      # ======================================================================
+        # ======================================================================
+        # Git Configuration
+        # ======================================================================
 
-      extraConfig = {
         # === Basic Settings ===
         init.defaultBranch = "main";              # Use 'main' instead of 'master'
         pull.rebase = false;                      # Use merge instead of rebase on pull
@@ -151,7 +153,8 @@ in
         # === Helpful Features ===
         help.autocorrect = 1;                     # Autocorrect typos after 0.1 seconds
         rerere.enabled = true;                    # Remember how you resolved conflicts
-      };
+
+      }; 
 
       # ======================================================================
       # Global Git Ignore Patterns
