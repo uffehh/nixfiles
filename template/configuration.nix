@@ -149,7 +149,7 @@
   # ============================================================================
 
   # Enable some useful programs system-wide
-  programs.bash.enableCompletion = true; # Tab completion for bash
+  programs.bash.completion.enable = true; # Tab completion for bash
   programs.git.enable = true; # Git (already in systemPackages, but good to enable)
 
   # Optional: Enable Docker (uncomment if you need it)
