@@ -46,12 +46,7 @@
       work-dev.terminal.enable = lib.mkDefault true;
       work-dev.dotnet.enable = lib.mkDefault true;
       work-dev.databases.enable = lib.mkDefault true;
-      work-dev.gui-apps = {
-        enable = lib.mkDefault true;
-        jetbrains.rider = lib.mkDefault false;
-        jetbrains.datagrip = lib.mkDefault false;
-        teams = lib.mkDefault false;
-      };
+      work-dev.gui-apps.enable = lib.mkDefault true;
       work-dev.wslg.enable = lib.mkDefault true;
     })
 

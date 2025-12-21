@@ -72,6 +72,9 @@
 
   # OPTION 1: Enable everything at once with the developer profile
   work-dev.profiles.developer = true;
+  work-dev.gui-apps.jetbrains.rider = false;    # Disable Rider IDE
+  work-dev.gui-apps.jetbrains.datagrip = false; # Disable DataGrip IDE
+  work-dev.gui-apps.teams = false;              # Disable Microsoft Teams
 
   # OPTION 2: Or comment out the line above and enable modules individually:
   # work-dev.dotnet.enable = true;       # C# and .NET development tools
