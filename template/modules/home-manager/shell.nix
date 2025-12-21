@@ -88,12 +88,6 @@ in
 
         # Welcome message
         echo "Welcome to NixOS WSL! Type 'rebuild' (or 'nh os switch --ask') to rebuild your system."
-        ${lib.optionalString cfg.funPackages ''
-        # Show a random fortune with cowsay
-        if command -v fortune &> /dev/null && command -v cowsay &> /dev/null; then
-          fortune | cowsay
-        fi
-        ''}
       '';
 
       # Shell aliases (shortcuts for common commands)
