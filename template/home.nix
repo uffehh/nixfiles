@@ -21,7 +21,7 @@
 
   # This value determines the Home Manager release which the configuration is
   # compatible with. Don't change this unless you know what you're doing!
-  home.stateVersion = "24.05";
+  home.stateVersion = "25.05";
 
   # ============================================================================
   # Custom Module Configuration (Examples of Modular Setup)

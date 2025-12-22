@@ -64,24 +64,24 @@
   };
 
   # Allow your user to use sudo without a password (optional, but convenient for WSL)
-  security.sudo.wheelNeedsPassword = true;
+  security.sudo.wheelNeedsPassword = false;
 
   # ============================================================================
   # Work Development Environment
   # ============================================================================
 
   # OPTION 1: Enable everything at once with the developer profile
-  work-dev.profiles.developer = true;
+  #work-dev.profiles.developer = true;
+
+  # OPTION 2: Or comment out the line above and enable modules individually:
+  work-dev.dotnet.enable = true;       # C# and .NET development tools
+  work-dev.databases.enable = true;    # PostgreSQL, SQL Server clients
+  work-dev.gui-apps.enable = true;     # Rider, DataGrip IDEs
   work-dev.gui-apps.jetbrains.rider = false;    # Disable Rider IDE
   work-dev.gui-apps.jetbrains.datagrip = false; # Disable DataGrip IDE
   work-dev.gui-apps.teams = false;              # Disable Microsoft Teams
-
-  # OPTION 2: Or comment out the line above and enable modules individually:
-  # work-dev.dotnet.enable = true;       # C# and .NET development tools
-  # work-dev.databases.enable = true;    # PostgreSQL, SQL Server clients
-  # work-dev.gui-apps.enable = true;     # Rider, DataGrip IDEs
-  # work-dev.wslg.enable = true;         # WSLg GUI support
-  # work-dev.terminal.enable = true;     # Enhanced terminal tools
+  work-dev.wslg.enable = true;         # WSLg GUI support
+  work-dev.terminal.enable = true;     # Enhanced terminal tools
 
   # Configure Git for work
   # TODO: Replace with your actual name and email
