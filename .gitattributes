@@ -1,0 +1,5 @@
+# Always use LF line endings (Linux-style).
+* text eol=lf
+
+*.nix text eol=lf
+*.md text eol=lf
